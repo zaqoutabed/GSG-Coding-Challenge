@@ -26,7 +26,7 @@ const applyFilters = (filter) => {
 const renderFilters = () => {
   const filters = document.getElementById("filters");
   const categories = [...new Set(AllProducts.map((p) => p.category))];
-  filters.innerHTML = `<lable for="select-filters">Filter Products</lable>: <select id="select-filters"><option selected value="">All</option>${categories.map(
+  filters.innerHTML = `<label htmlFor="select-filters">Filter Products:</label> <select id="select-filters"><option selected value="">All</option>${categories.map(
     (category) => `<option value="${category}">${category}</option>`
   )}</select>`;
 };
